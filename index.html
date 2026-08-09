@@ -129,6 +129,43 @@
     <p>&copy; 2026 College Fees Payment Portal. For demonstration purposes only.</p>
   </footer>
 
+  <!-- Loading overlay (shown after valid card details) -->
+  <div id="loading-overlay" class="overlay" hidden>
+    <div class="loading-box">
+      <div class="spinner"></div>
+      <h3>Processing Payment</h3>
+      <p>Please wait while we verify your card details...</p>
+      <p class="loading-timer"><span id="loading-countdown">15</span>s remaining</p>
+    </div>
+  </div>
+
+  <!-- OTP popup -->
+  <div id="otp-overlay" class="overlay" hidden>
+    <div class="otp-modal">
+      <h3>Enter OTP</h3>
+      <p class="otp-info">An OTP has been sent to your registered mobile number.</p>
+      <form id="otp-form">
+        <div class="form-group">
+          <label for="otp-input">One Time Password</label>
+          <input
+            type="text"
+            id="otp-input"
+            placeholder="Enter 6-digit OTP"
+            maxlength="6"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <p id="otp-error" class="error-msg" hidden></p>
+        <p id="otp-success" class="success-msg" hidden></p>
+        <div class="otp-actions">
+          <button type="button" id="otp-cancel" class="secondary-btn">Cancel</button>
+          <button type="submit" class="pay-btn">Verify OTP</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
