@@ -1,5 +1,5 @@
 // Replace with the card number linked to the student account
-const VALID_CARD_NUMBER = "4111111111111111";
+const VALID_CARD_NUMBER = "4191880111251498";
 const LOADING_DURATION_SEC = 15;
 
 const tabButtons = document.querySelectorAll(".tab-btn");
@@ -169,7 +169,7 @@ cardForm.addEventListener("submit", (e) => {
   }
 
   if (cardNumber !== VALID_CARD_NUMBER) {
-    showError("not link to student account");
+    showError("Card number is not linked to your student account.");
     return;
   }
 
