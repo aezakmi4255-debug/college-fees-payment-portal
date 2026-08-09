@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Fees Payment Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <!-- Replace src below with your college logo (e.g. assets/college-logo.png or a URL) -->
+      <img
+        src="assets/college-logo.svg"
+        alt="College Logo"
+        class="college-logo"
+      />
+      <div class="header-text">
+        <h1>College Fees Payment Portal</h1>
+        <p>Secure online fee payment for students</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card fee-summary">
+      <h2>Fee Details</h2>
+      <div class="fee-row">
+        <span class="label">Student Name</span>
+        <span class="value">Demo Student</span>
+      </div>
+      <div class="fee-row">
+        <span class="label">Roll Number</span>
+        <span class="value">2024CS001</span>
+      </div>
+      <div class="fee-row">
+        <span class="label">Semester</span>
+        <span class="value">Semester VI</span>
+      </div>
+      <div class="fee-row amount-row">
+        <span class="label">Amount Payable</span>
+        <!-- Replace amount below with actual fee amount -->
+        <span class="value amount">₹ 45,000.00</span>
+      </div>
+    </section>
+
+    <section class="card payment-section">
+      <h2>Select Payment Method</h2>
+
+      <div class="payment-tabs">
+        <button type="button" class="tab-btn active" data-tab="netbanking">
+          Net Banking
+        </button>
+        <button type="button" class="tab-btn" data-tab="card">
+          Card Payment
+        </button>
+      </div>
+
+      <!-- Net Banking (blank / placeholder) -->
+      <div id="netbanking-panel" class="payment-panel active">
+        <div class="placeholder-panel">
+          <div class="placeholder-icon">🏦</div>
+          <p>Net banking integration coming soon.</p>
+          <p class="hint">Bank selection and login will appear here.</p>
+        </div>
+      </div>
+
+      <!-- Card Payment -->
+      <div id="card-panel" class="payment-panel">
+        <form id="card-form" class="card-form" novalidate>
+          <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input
+              type="text"
+              id="card-number"
+              name="cardNumber"
+              placeholder="1234 5678 9012 3456"
+              maxlength="19"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="card-name">Name on Card</label>
+              <input
+                type="text"
+                id="card-name"
+                name="cardName"
+                placeholder="As printed on card"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="expiry">Expiry (MM/YY)</label>
+              <input
+                type="text"
+                id="expiry"
+                name="expiry"
+                placeholder="MM/YY"
+                maxlength="5"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input
+                type="password"
+                id="cvv"
+                name="cvv"
+                placeholder="***"
+                maxlength="4"
+                required
+              />
+            </div>
+          </div>
+
+          <p id="card-error" class="error-msg" hidden></p>
+          <p id="card-success" class="success-msg" hidden></p>
+
+          <button type="submit" class="pay-btn">Pay Now</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 College Fees Payment Portal. For demonstration purposes only.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#ffffff"/>
+  <circle cx="100" cy="88" r="52" fill="none" stroke="#800000" stroke-width="6"/>
+  <text x="100" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#800000">C</text>
+  <text x="100" y="165" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#800000">COLLEGE LOGO</text>
+</svg>

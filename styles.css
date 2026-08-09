@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --maroon: #800000;
+  --maroon-dark: #5c0000;
+  --maroon-light: #a83232;
+  --white: #ffffff;
+  --off-white: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e8e8e8;
+  --gray-600: #666666;
+  --gray-800: #333333;
+  --success: #1b7a3d;
+  --error: #b00020;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--off-white);
+  color: var(--gray-800);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--maroon);
+  color: var(--white);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(128, 0, 0, 0.25);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.college-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.logo-placeholder {
+  width: 72px;
+  height: 72px;
+  background: var(--white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--maroon);
+  font-size: 0.85rem;
+}
+
+.header-text h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.header-text p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  flex: 1;
+  width: 100%;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  color: var(--maroon);
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--maroon);
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.fee-row:last-child {
+  border-bottom: none;
+}
+
+.fee-row .label {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+.fee-row .value {
+  font-weight: 600;
+}
+
+.amount-row {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--maroon-light);
+}
+
+.amount-row .amount {
+  font-size: 1.35rem;
+  color: var(--maroon);
+}
+
+.payment-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--maroon);
+  background: var(--white);
+  color: var(--maroon);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn:hover {
+  background: var(--gray-100);
+}
+
+.tab-btn.active {
+  background: var(--maroon);
+  color: var(--white);
+}
+
+.payment-panel {
+  display: none;
+}
+
+.payment-panel.active {
+  display: block;
+}
+
+.placeholder-panel {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: var(--gray-100);
+  border-radius: 8px;
+  border: 1px dashed var(--gray-200);
+}
+
+.placeholder-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.placeholder-panel p {
+  color: var(--gray-600);
+  margin-bottom: 0.35rem;
+}
+
+.placeholder-panel .hint {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.card-form {
+  max-width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 0.35rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--maroon);
+  box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.12);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.error-msg {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background: #fde8eb;
+  border-radius: 6px;
+  border-left: 4px solid var(--error);
+}
+
+.success-msg {
+  color: var(--success);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background: #e8f5ec;
+  border-radius: 6px;
+  border-left: 4px solid var(--success);
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--maroon);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.pay-btn:hover {
+  background: var(--maroon-dark);
+}
+
+.pay-btn:active {
+  transform: scale(0.99);
+}
+
+.footer {
+  background: var(--maroon-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-tabs {
+    flex-direction: column;
+  }
+}
